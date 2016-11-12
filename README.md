@@ -1,4 +1,4 @@
-## Reddit Unleashed - Front Pageg
+## Reddit Unleashed - Front Page
 
 <img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=600 height=450 />
 
