@@ -19,14 +19,16 @@ $cinnabar: #E74C3C; // secondary red
 /* Common Variables */
 $border-radius: 4px;
 
-body {
-  // background-color: white;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 * {
+  -webkit-font-smoothing: antialiased; // allow ligher fonts in chrome
+
   font-family: $minor, sans-serif;
   font-weight: 200;
-  // color: rgba(20, 20, 20, 0.9);
 }
 
 a {

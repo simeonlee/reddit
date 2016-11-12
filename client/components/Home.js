@@ -6,15 +6,23 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allContent: [],
+      allContent: [], // TODO: implement infinite scroll
       subscribedContent: [],
       subscribed: {},
       mode: 'all',
     }
+    this.getAllContent(); // Automatically load default from /r/all
   }
 
-  componentDidMount() {
-    // Automatically load default from /r/all
+  setModeToAll() {
+    this.setState({mode: 'all'})
+  }
+
+  setModeToSubscribed() {
+    this.setState({mode: 'subscribed'})
+  }
+
+  getAllContent() {
     $.ajax({
       dataType: 'json',
       url: 'http://www.reddit.com/r/all.json?jsonp=?',
@@ -23,14 +31,6 @@ export default class Home extends Component {
         console.log(data);
       }
     });
-  }
-
-  subscribeToSubreddit(e) {
-    var subreddit = e.target.className.split(' ')[1].toLowerCase();
-    var { subscribed } = this.state;
-    subscribed[subreddit] = true;
-    this.setState({ subscribed });
-    this.getSubscribedContent(subreddit);
   }
 
   getSubscribedContent(subreddit) {
@@ -42,47 +42,26 @@ export default class Home extends Component {
         var { subscribedContent } = this.state;
         subscribedContent = subscribedContent.concat(data.data.children);
         this.setState({ subscribedContent });
-        console.log(this.state.subscribedContent);
+        console.log(this.state.subscribedContent); // TODO: implement content sort
       }
     });
   }
 
-  setModeToAll() {
-    this.setState({mode: 'all'})
-  } 
-
-  setModeToSubscribed() {
-    this.setState({mode: 'subscribed'})
+  subscribeToSubreddit(e) { // TODO: implement UX response when clicking subreddit name to subscribe
+    var subreddit = e.target.className.split(' ')[1].toLowerCase();
+    var { subscribed } = this.state;
+    subscribed[subreddit] = true;
+    this.setState({ subscribed });
+    this.getSubscribedContent(subreddit);
   }
 
   render() {
     // Toggle between /r/all and subscribed
     const content = this.state.mode === 'all' ? this.state.allContent : this.state.subscribedContent;
+
     const modules = content.map((post, i) => {
       const backgroundStyle = {
-        'background': `url(${post.data.thumbnail}) no-repeat center center fixed`,
-        // 'width': '100%',
-        // 'height': '100%',
-        // 'position': 'absolute',
-        // 'top': '0',
-        // 'left': '0',
-        // 'right': '0',
-        // 'bottom': '0',
-        // 'zIndex': '-1',
-        // 'WebkitBackgroundSize': 'cover',
-        // 'MozBackgroundSize': 'cover',
-        // 'OBackgroundSize': 'cover',
-        // 'backgroundSize': 'cover',
-        // 'WebkitFilter': 'blur(5px)',
-        // 'MozFilter': 'blur(5px)',
-        // 'OFilter': 'blur(5px)',
-        // 'msFilter': 'blur(5px)',
-        // 'filter': 'blur(5px)',
-        // 'WebkitTransform': 'scale(1.1)',
-        // 'MozTransform': 'scale(1.1)',
-        // 'msTransform': 'scale(1.1)',
-        // 'OTransform': 'scale(1.1)',
-        // 'transform': 'scale(1.1)',
+        'background': `url(${post.data.thumbnail}) no-repeat center center fixed`, // Unique background photo for each post
       };
 
       return (
