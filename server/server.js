@@ -4,7 +4,7 @@ var https = require('https');
 var http = require('http');
 var fs = require('fs');
 
-var port = 5000;
+var port = 5000; // 5000 is proxy for browersync purposes; use localhost:3000 to load site
 
 require('./config/middleware.js')(app, express); // Middleware
 

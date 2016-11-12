@@ -9,7 +9,9 @@ export default class Home extends Component {
   render() {
     return (
       <div className="nav">
-        <div className="brand">Reddit Unleashed</div>
+        <Link to="/" className="nav-link">/r/all</Link>
+        <Link to="/" className="brand">Reddit Unleashed</Link>
+        <Link to="/" className="nav-link">subscribed</Link>
       </div>
     )
   }

@@ -15,7 +15,7 @@ export default class App extends Component {
         <Router history={browserHistory}>
           <Route path="/" component={RouterContainer}>
             <IndexRoute component={Home}/>
-            <Route path="/" component={Home}/>
+            {/*<Route path="/" component={Home}/>*/}
           </Route>
         </Router>
       </div>
