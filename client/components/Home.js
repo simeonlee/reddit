@@ -40,9 +40,9 @@ export default class Home extends Component {
       // Add content to subscribed content
       success: data => {
         var { subscribedContent } = this.state;
-        subscribedContent = subscribedContent.concat(data.data.children);
+        subscribedContent = subscribedContent.concat(data.data.children).sort((a, b) => { return a.ups <= b.ups ? -1 : 1 });
         this.setState({ subscribedContent });
-        console.log(this.state.subscribedContent); // TODO: implement content sort
+        console.log(this.state.subscribedContent);
       }
     });
   }
@@ -50,9 +50,11 @@ export default class Home extends Component {
   subscribeToSubreddit(e) { // TODO: implement UX response when clicking subreddit name to subscribe
     var subreddit = e.target.className.split(' ')[1].toLowerCase();
     var { subscribed } = this.state;
-    subscribed[subreddit] = true;
-    this.setState({ subscribed });
-    this.getSubscribedContent(subreddit);
+    if (!subscribed[subreddit]) {
+      subscribed[subreddit] = true;
+      this.setState({ subscribed });
+      this.getSubscribedContent(subreddit);
+    }
   }
 
   render() {
