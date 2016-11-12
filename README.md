@@ -1,6 +1,6 @@
 # Reddit Unleashed
 
-<img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=400 height=300 />
+<img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=800 height=600 />
 
 ## Installation
 
