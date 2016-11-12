@@ -1,0 +1,46 @@
+.post-module {
+  border-bottom: 1px solid rgb(20, 20, 20);
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+}
+
+.module-image {
+  // height: 200px;
+  // width: 200px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
+}
+
+.module-title span {
+  font-family: $major;
+  font-style: italic;
+  font-size: 2.0em;
+  background: rgba(255, 230, 0, 0.5);
+  padding: 3px 10px 3px 5px;
+  margin: -3px -10px -3px -5px;
+  line-height: 1.7;
+  border-radius: 3px;
+  display: inline;
+}
+
+.module-upvote-icon {
+  position: absolute;
+  right: 80px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.module-upvotes {
+  font-family: $major;
+  font-style: italic;
+  font-size: 20px;
+  color: #EF4836;
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+}

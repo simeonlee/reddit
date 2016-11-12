@@ -1,0 +1,26 @@
+.nav {
+  position: absolute;
+  height: 60px;
+  background-color: rgba(20, 20, 20, 1.0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  * {
+    color: white;
+  }
+}
+
+.body-container {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.brand {
+  font-family: $major;
+  font-style: italic;
+  font-size: 30px;
+}

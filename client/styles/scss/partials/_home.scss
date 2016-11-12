@@ -31,19 +31,19 @@
   // right: 0;
   // bottom: 0;
   // left: 0;
-  background:
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      165deg,
-      rgba(25, 181, 254, 0.6),
-      rgba(102, 51, 153, 0.6) 
-    ),
-    /* bottom, image */
-    url(../../images/background/westside-bw.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  // background:
+    // /* top, transparent red, faked with gradient */ 
+    // linear-gradient(
+    //   165deg,
+    //   rgba(25, 181, 254, 0.6),
+    //   rgba(102, 51, 153, 0.6) 
+    // ),
+    // /* bottom, image */
+    // url(../../images/background/westside-bw.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .intro-name {
