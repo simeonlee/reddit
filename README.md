@@ -1,6 +1,6 @@
-## Reddit Unleashed - Front Page
+## Reddit Unleashed - Front Pageg
 
-<img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=800 height=600 />
+<img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=600 height=450 />
 
 ## Installation
 
