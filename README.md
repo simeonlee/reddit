@@ -21,3 +21,4 @@
 + Implement content sort
 + Implement more UX responsitivity
 + Implement Redux to decouple navbar from Home.js
++ Implement auth / login / cookies to persist subscribed subreddits
