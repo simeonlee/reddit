@@ -1,17 +1,23 @@
-## Reddit Unleashed
+# Reddit Unleashed
 
 <img src=https://github.com/simeonlee/reddit/blob/master/images/app/reddit-unleashed-ui.png width=400 height=300 />
 
-### Installation & Usage
+## Installation
 
-+ download onto desktop
++ Download onto desktop
 + 'npm install' via command line to install packages
 + 'gulp' via command line to run build
-+ navigate to localhost:3000 with Chrome
++ Navigate to localhost:3000 with Chrome
 
-### To Do
+## Usage
 
-+ implement infinite scroll
-+ implement content sort
-+ implement more UX responsitivity
-+ implement Redux to decouple navbar from Home.js
++ Default site loads /r/all
++ Click subreddit names in each post to subscribe
++ Navigate to 'Subscribed' in nav bar to see subscribed subreddits
+
+## To Do
+
++ Implement infinite scroll
++ Implement content sort
++ Implement more UX responsitivity
++ Implement Redux to decouple navbar from Home.js
